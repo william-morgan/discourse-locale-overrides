@@ -33,7 +33,7 @@ en:
     <<: *datetime
 
   title: "Discourse"
-  topics: "Threads"
+  threads: "Threads"
   posts: "posts"
   loading: "Loading"
   powered_by_html: 'Powered by <a href="http://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled'
@@ -152,7 +152,7 @@ en:
     other: "Sorry, new users can only put %{count} links in a post."
   spamming_host: "Sorry you cannot post a link to that host."
   user_is_suspended: "Suspended users are not allowed to post."
-  topic_not_found: "Something has gone wrong. Perhaps this thread was closed or deleted while you were looking at it?"
+  thread_not_found: "Something has gone wrong. Perhaps this thread was closed or deleted while you were looking at it?"
 
   just_posted_that: "is too similar to what you recently posted"
   has_already_been_used: "has already been used"
@@ -162,9 +162,9 @@ en:
   prev_page: "← previous page"
   page_num: "Page %{num}"
   home_title: "Home"
-  topics_in_category: "Threads in the '%{category}' thread"
+  threads_in_category: "Threads in the '%{category}' forum"
   rss_posts_in_topic: "RSS feed of '%{topic}'"
-  rss_topics_in_category: "RSS feed of threads in the '%{category}' thread"
+  rss_topics_in_category: "RSS feed of threads in the '%{category}' forum"
   author_wrote: "%{author} wrote:"
   num_posts: "Posts:"
   num_participants: "Participants:"
@@ -208,7 +208,7 @@ en:
 
       - Who would be interested in this? Why does it matter? What kind of responses do you want?
 
-      - Include commonly used words in your thead so others can *find* it. To group your thread with related threads, select a thread.
+      - Include commonly used words in your thread so others can *find* it. To group your thread with related threads, select a forum.
 
       For more, [see our community guidelines](/guidelines). This panel will only appear for your first %{education_posts_text}.
 
@@ -264,8 +264,8 @@ en:
 
   activerecord:
     attributes:
-      category:
-        name: "Thread Name"
+      forum:
+        name: "Forum Name"
       post:
         raw: "Body"
       user_profile:
@@ -277,7 +277,7 @@ en:
         is_invalid: "is invalid; try to be a little more descriptive"
         has_already_been_used: "has already been used"
       models:
-        topic:
+        thread:
           attributes:
             base:
               warning_requires_pm: "You can only attach warnings to private messages."
@@ -337,22 +337,22 @@ en:
       [trust]: https://meta.discourse.org/t/what-do-user-trust-levels-do/4924
 
 
-  category:
-    topic_prefix: "About the %{category} forum"
-    replace_paragraph: "[Replace this first paragraph with a short description of your new forum. This guidance will appear in the forum selection area, so try to keep it below 200 characters. Until you edit this text or create threads, this forum won't appear on the forums page.]"
-    post_template: "%{replace_paragraph}\n\nUse the following paragraphs for a longer description, as well as to establish any forum guidelines or rules.\n\nSome things to consider in any discussion replies below:\n\n- What is this forum for? Why should people select this forum for their thread?\n\n- How is this different than the other forums we already have?\n\n- Do we need this forum?\n\n- Should we merge this with another forum, or split it into more forums?\n"
+  forum:
+    thread_prefix: "About the %{category} forum"
+    replace_paragraph: "[Replace this first paragraph with a short description of your new forum. This guidance will appear in the forum selection area, so try to keep it below 200 characters. Until you edit this text or create threads, this forum won't appear on the categories page.]"
+    post_template: "%{replace_paragraph}\n\nUse the following paragraphs for a longer description, as well as to establish any forum guidelines or rules.\n\nSome things to consider in any discussion replies below:\n\n- What is this forum for? Why should people select this forum for their thread?\n\n- How is this different than the other categories we already have?\n\n- Do we need this forum?\n\n- Should we merge this with another forum, or split it into more categories?\n"
     errors:
       uncategorized_parent: "Uncategorized can't have a parent forum"
-      self_parent: "A sub-forums's parent cannot be itself"
-      depth: "You can't nest a sub-forum under another"
+      self_parent: "A subforum's parent cannot be itself"
+      depth: "You can't nest a subforum under another"
       email_in_already_exist: "Incoming email address '%{email_in}' is already in use for '%{category_name}' forum."
     cannot_delete:
       uncategorized: "Can't delete Uncategorized"
-      has_subcategories: "Can't delete this forum because it has sub-forums."
-      topic_exists:
-        one: "Can't delete this forum because is has 1 thread. Oldest thread is %{thread_link}."
-        other: "Can't delete this forum because it has %{count} threads. Oldest thread is %{thread_link}."
-      topic_exists_no_oldest: "Can't delete this forum because thread count is %{count}."
+      has_subcategories: "Can't delete this forum because it has sub-categories."
+      thread_exists:
+        one: "Can't delete this forum because is has 1 thread. Oldest thread is %{topic_link}."
+        other: "Can't delete this forum because it has %{count} threads. Oldest thread is %{topic_link}."
+      thread_exists_no_oldest: "Can't delete this forum because thread count is %{count}."
   trust_levels:
     newuser:
       title: "new user"
@@ -479,9 +479,9 @@ en:
     missing_session: "We can not detect if your account was created, please ensure you have cookies enabled."
   post_action_types:
     off_topic:
-      title: 'Off-Thread'
+      title: 'Off-Topic'
       description: 'This post is not relevant to the current discussion as defined by the title and first post, and should probably be moved elsewhere.'
-      long_form: 'flagged this as off-thread'
+      long_form: 'flagged this as off-topic'
     spam:
       title: 'Spam'
       description: 'This post is an advertisement. It is not useful or relevant to the current thread, but promotional in nature.'
@@ -517,7 +517,7 @@ en:
       description: 'Vote for this post'
       long_form: 'voted for this post'
 
-  topic_flag_types:
+  thread_flag_types:
     spam:
       title: 'Spam'
       description: 'This thread is an advertisement. It is not useful or relevant to this site, but promotional in nature.'
@@ -539,9 +539,9 @@ en:
 
   archetypes:
     regular:
-      title: "Regular Thread"
+      title: "Regular Topic"
     banner:
-      title: "Banner Thread"
+      title: "Banner Topic"
       message:
         make: "This thread is now a banner. It will appear at the top of every page until it is dismissed by the user."
         remove: "This thread is no longer a banner. It will no longer appear at the top of every page."
@@ -569,7 +569,7 @@ en:
       title: "New Users"
       xaxis: "Day"
       yaxis: "Number of new users"
-    topics:
+    threads:
       title: "Threads"
       xaxis: "Day"
       yaxis: "Number of new threads"
@@ -634,7 +634,7 @@ en:
       num_users: "Users"
     top_referred_topics:
       title: "Top Referred Threads"
-      xaxis: "Thread"
+      xaxis: "Topic"
       num_clicks: "Clicks"
     page_view_anon_reqs:
       title: "Anonymous"
@@ -688,7 +688,7 @@ en:
       title: "Time to first response"
       xaxis: "Day"
       yaxis: "Average time (hours)"
-    topics_with_no_response:
+    threads_with_no_response:
       title: "Threads with no response"
       xaxis: "Day"
       yaxis: "Total"
@@ -760,7 +760,7 @@ en:
     default_locale: "The default language of this Discourse instance (ISO 639-1 Code)"
     allow_user_locale: "Allow users to choose their own language interface preference"
     min_post_length: "Minimum allowed post length in characters"
-    min_first_post_length: "Minimum allowed first post (thread body) length in characters"
+    min_first_post_length: "Minimum allowed first post (topic body) length in characters"
     min_private_message_post_length: "Minimum allowed post length in characters for messages"
     max_post_length: "Maximum allowed post length in characters"
     min_topic_title_length: "Minimum allowed thread title length in characters"
@@ -787,9 +787,9 @@ en:
     delete_removed_posts_after: "Posts removed by the author will be automatically deleted after (n) hours. If set to 0, posts will be deleted immediately."
     max_image_width: "Maximum thumbnail width of images in a post"
     max_image_height: "Maximum thumbnail height of images in a post"
-    category_featured_topics: "Number of threads displayed per forum on the /forums page. After changing this value, it takes up to 15 minutes for the forums page to update."
-    show_subcategory_list: "Show sub-forum list instead of thread list when entering a forum."
-    fixed_category_positions: "If checked, you will be able to arrange forums into a fixed order. If unchecked, forums are listed in order of activity."
+    forum_featured_topics: "Number of threads displayed per forum on the /categories page. After changing this value, it takes up to 15 minutes for the categories page to update."
+    show_subcategory_list: "Show subforum list instead of thread list when entering a forum."
+    fixed_category_positions: "If checked, you will be able to arrange categories into a fixed order. If unchecked, categories are listed in order of activity."
     fixed_category_positions_on_create: "If checked, forum ordering will be maintained on thread creation dialog (requires fixed_category_positions)."
     add_rel_nofollow_to_user_content: "Add rel nofollow to all submitted user content, except for internal links (including parent domains). If you change this, you must rebake all posts with: \"rake posts:rebake\""
     exclude_rel_nofollow_domains: "A list of domains where nofollow should not be added to links. tld.com will automatically allow sub.tld.com as well. As a minimum, you should add the top-level domain of this site to help web crawlers find all content. If other parts of your website are at other domains, add those too."
@@ -809,11 +809,11 @@ en:
     email_custom_headers: "A pipe-delimited list of custom email headers"
     email_subject: "Customizable subject format for standard emails. See https://meta.discourse.org/t/customize-subject-format-for-standard-emails/20801"
     use_https: "Should the full url for the site (Discourse.base_url) be http or https? DO NOT ENABLE THIS UNLESS HTTPS IS ALREADY SET UP AND WORKING!"
-    summary_score_threshold: "The minimum score required for a post to be included in 'Summarize This Thread'"
-    summary_posts_required: "Minimum posts in a thread before 'Summarize This Thread' is enabled"
-    summary_likes_required: "Minimum likes in a thread before 'Summarize This Thread' is enabled"
-    summary_percent_filter: "When a user clicks 'Summarize This Thread', show the top % of posts"
-    summary_max_results: "Maximum posts returned by 'Summary This Thread'"
+    summary_score_threshold: "The minimum score required for a post to be included in 'Summarize This Topic'"
+    summary_posts_required: "Minimum posts in a thread before 'Summarize This Topic' is enabled"
+    summary_likes_required: "Minimum likes in a thread before 'Summarize This Topic' is enabled"
+    summary_percent_filter: "When a user clicks 'Summarize This Topic', show the top % of posts"
+    summary_max_results: "Maximum posts returned by 'Summary This Topic'"
 
     enable_private_messages: "Allow trust level 1 users to create messages and reply to messages"
 
@@ -852,7 +852,7 @@ en:
     ga_universal_domain_name: "Google Universal Analytics (analytics.js) domain name, eg: mysite.com; see http://google.com/analytics"
     enable_escaped_fragments: "Fall back to Google's Ajax-Crawling API if no webcrawler is detected. See https://support.google.com/webmasters/answer/174992?hl=en"
     enable_noscript_support: "Enable standard webcrawler search engine support via the noscript tag"
-    allow_moderators_to_create_categories: "Allow moderators to create new forums"
+    allow_moderators_to_create_categories: "Allow moderators to create new categories"
     cors_origins: "Allowed origins for cross-origin requests (CORS). Each origin must include http:// or https://. The DISCOURSE_ENABLE_CORS env variable must be set to true to enable CORS."
     top_menu: "Determine which items appear in the homepage navigation, and in what order. Example latest|new|unread|categories|top|read|posted|bookmarks"
     post_menu: "Determine which items appear on the post menu, and in what order. Example like|edit|flag|delete|share|bookmark|reply"
@@ -868,8 +868,8 @@ en:
 
     experimental_reply_expansion: "Hide intermediate replies when expanding a reply to (experimental)"
 
-    topics_per_period_in_top_summary: "Number of top threads shown in the default top threads summary."
-    topics_per_period_in_top_page: "Number of top threads shown on the expanded 'Show More' top threads."
+    threads_per_period_in_top_summary: "Number of top threads shown in the default top threads summary."
+    threads_per_period_in_top_page: "Number of top threads shown on the expanded 'Show More' top threads."
     redirect_users_to_top_page: "Automatically redirect new and long absent users to the top page."
     show_email_on_profile: "Show a user's email on their profile (only visible to themselves and staff)"
 
@@ -1032,8 +1032,8 @@ en:
     min_title_similar_length: "The minimum length of a title before it will be checked for similar threads."
     min_body_similar_length: "The minimum length of a post's body before it will be checked for similar threads."
 
-    category_colors: "A list of hexadecimal color values allowed for forums."
-    category_style: "Visual style for forum badges."
+    forum_colors: "A list of hexadecimal color values allowed for categories."
+    forum_style: "Visual style for forum badges."
 
     max_image_size_kb: "The maximum image upload size in kB. This must be configured in nginx (client_max_body_size) / apache or proxy as well."
     max_attachment_size_kb: "The maximum attachment files upload size in kB. This must be configured in nginx (client_max_body_size) / apache or proxy as well."
@@ -1042,9 +1042,9 @@ en:
 
     title_prettify: "Prevent common title typos and errors, including all caps, lowercase first character, multiple ! and ?, extra . at end, etc."
 
-    topic_views_heat_low: "After this many views, the views field is slightly highlighted."
-    topic_views_heat_medium: "After this many views, the views field is moderately highlighted."
-    topic_views_heat_high: "After this many views, the views field is strongly highlighted."
+    thread_views_heat_low: "After this many views, the views field is slightly highlighted."
+    thread_views_heat_medium: "After this many views, the views field is moderately highlighted."
+    thread_views_heat_high: "After this many views, the views field is strongly highlighted."
 
     cold_age_days_low: "After this many days of conversation, the last activity date is slightly dimmed."
     cold_age_days_medium: "After this many days of conversation, the last activity date is moderately dimmed."
@@ -1054,9 +1054,9 @@ en:
     history_hours_medium: "A post edited within this many hours has the edit indicator moderately highlighted."
     history_hours_high: "A post edited within this many hours has the edit indicator strongly highlighted."
 
-    topic_post_like_heat_low: "After the likes:post ratio exceeds this ratio, the post count field is slightly highlighted."
-    topic_post_like_heat_medium: "After the likes:post ratio exceeds this ratio, the post count field is moderately highlighted."
-    topic_post_like_heat_high: "After the likes:post ratio exceeds this ratio, the post count field is strongly highlighted."
+    thread_post_like_heat_low: "After the likes:post ratio exceeds this ratio, the post count field is slightly highlighted."
+    thread_post_like_heat_medium: "After the likes:post ratio exceeds this ratio, the post count field is moderately highlighted."
+    thread_post_like_heat_high: "After the likes:post ratio exceeds this ratio, the post count field is strongly highlighted."
 
     faq_url: "If you have a FAQ hosted elsewhere that you want to use, provide the full URL here."
     tos_url: "If you have a Terms of Service document hosted elsewhere that you want to use, provide the full URL here."
@@ -1066,7 +1066,7 @@ en:
 
     white_listed_spam_host_domains: "A list of domains excluded from spam host testing. New users will never be restricted from creating posts with links to these domains."
     staff_like_weight: "How much extra weighting factor to give staff likes."
-    topic_view_duration_hours: "Count new a thread view once per IP/User every N hours"
+    thread_view_duration_hours: "Count new a thread view once per IP/User every N hours"
 
     levenshtein_distance_spammer_emails: "When matching spammer emails, number of characters difference that will still allow a fuzzy match."
     max_new_accounts_per_registration_ip: "If there are already (n) trust level 0 accounts from this IP (and none is a staff member or at TL2 or higher), stop accepting new signups from that IP."
@@ -1100,7 +1100,7 @@ en:
     pop3_polling_username: "The username for the POP3 account to poll for email."
     pop3_polling_password: "The password for the POP3 account to poll for email."
     log_mail_processing_failures: "Log all email processing failures to http://yoursitename.com/logs"
-    email_in: "Allow users to post new threads via email (requires pop3 polling). Configure the addresses in the \"Settings\" tab of each category."
+    email_in: "Allow users to post new threads via email (requires pop3 polling). Configure the addresses in the \"Settings\" tab of each forum."
     email_in_min_trust: "The minimum trust level a user needs to have to be allowed to post new threads via email."
     email_prefix: "The [label] used in the subject of emails. It will default to 'title' if not set."
     email_site_title: "The title of the site used as the sender of emails from the site. Default to 'title' if not set. If your 'title' contains characters that are not allowed in email sender strings, use this setting."
@@ -1147,7 +1147,7 @@ en:
 
     suppress_uncategorized_badge: "Don't show the badge for uncategorized threads in thread lists."
 
-    permalink_normalizations: "Apply the following regex before matching permalinks, for example: /(\\/thread.*)\\?.*/\\1 will strip query strings from thread routes. Format is regex+string use \\1 etc. to access captures"
+    permalink_normalizations: "Apply the following regex before matching permalinks, for example: /(\\/topic.*)\\?.*/\\1 will strip query strings from thread routes. Format is regex+string use \\1 etc. to access captures"
 
     global_notice: "Display an URGENT, EMERGENCY global banner notice to all visitors, change to blank to hide it (HTML allowed)."
 
@@ -1170,7 +1170,7 @@ en:
     embed_by_username: "Discourse username of the user who creates the embedded threads."
     embed_username_key_from_feed: "Key to pull discourse username from feed."
     embed_truncate: "Truncate the embedded posts."
-    embed_category: "Category of embedded threads."
+    embed_category: "Forum of embedded threads."
     embed_post_limit: "Maximum number of posts to embed."
     embed_whitelist_selector: "CSS selector for elements that are allowed in embeds."
     embed_blacklist_selector: "CSS selector for elements that are removed from embeds."
@@ -1227,8 +1227,8 @@ en:
   search:
     within_post: "#%{post_number} by %{username}"
     types:
-      category: 'Forums'
-      topic: 'Results'
+      forum: 'Categories'
+      thread: 'Results'
       user: 'Users'
 
   sso:
@@ -1263,7 +1263,7 @@ en:
       name_already_exists: "Sorry, the name '%{name}' is already used by another emoji."
       error_while_storing_emoji: "Sorry, there has been an error while storing the emoji."
 
-  topic_statuses:
+  thread_statuses:
     archived_enabled: "This thread is now archived. It is frozen and cannot be changed in any way."
     archived_disabled: "This thread is now unarchived. It is no longer frozen, and can be changed."
     closed_enabled: "This thread is now closed. New replies are no longer allowed."
@@ -1515,7 +1515,7 @@ en:
 
         To read more, **just keep scrolling down!**
 
-        As new replies or new threadss arrive, they will appear automatically – no need to refresh the page.
+        As new replies or new threads arrive, they will appear automatically – no need to refresh the page.
 
         ## Navigation
 
@@ -1531,11 +1531,11 @@ en:
 
         ## Replying
 
-        - To reply to the **thread in general**, use <img src="%{base_url}/images/welcome/reply-topic-2x.png" width="25" height="23">  at the very bottom of the thread.
+        - To reply to the **topic in general**, use <img src="%{base_url}/images/welcome/reply-topic-2x.png" width="25" height="23">  at the very bottom of the thread.
 
         - To reply to a **specific person**, use <img src="%{base_url}/images/welcome/reply-post-2x.png" width="25" height="23"> on their post.
 
-        - To reply with **a new thread**, use <img src="%{base_url}/images/welcome/reply-as-linked-topic-2x.png" width="20" height="25"> to the right of the post. Both old and new thread will be automatically linked together.
+        - To reply with **a new thread**, use <img src="%{base_url}/images/welcome/reply-as-linked-topic-2x.png" width="20" height="25"> to the right of the post. Both old and new threads will be automatically linked together.
 
         To insert a quote, select the text you wish to quote, then press any Reply button. Repeat for multiple quotes!
 
@@ -1759,14 +1759,14 @@ en:
         None of the destination addresses are recognized. Please make sure that the site address is in the To: line (not Cc: or Bcc:), and that you are sending to the correct email address provided by staff.
 
     email_reject_topic_not_found:
-      subject_template: "[%{site_name}] Email issue -- Thread Not Found"
+      subject_template: "[%{site_name}] Email issue -- Topic Not Found"
       text_body_template: |
         We're sorry, but your email message to %{destination} (titled %{former_title}) didn't work.
 
         The thread you are replying to no longer exists, perhaps it was deleted? If you believe this is in error, contact a staff member.
 
     email_reject_topic_closed:
-      subject_template: "[%{site_name}] Email issue -- Thread Closed"
+      subject_template: "[%{site_name}] Email issue -- Topic Closed"
       text_body_template: |
         We're sorry, but your email message to %{destination} (titled %{former_title}) didn't work.
 
@@ -1902,7 +1902,7 @@ en:
         Please visit this link to view the message: %{base_url}%{url}
 
     user_replied:
-      subject_template: "[%{site_name}] %{tppic_title}"
+      subject_template: "[%{site_name}] %{topic_title}"
       text_body_template: |
         %{message}
 
@@ -1932,7 +1932,7 @@ en:
         %{respond_instructions}
 
     user_posted:
-      subject_template: "[%{site_name}] %{tppic_title}"
+      subject_template: "[%{site_name}] %{topic_title}"
       text_body_template: |
         %{message}
 
@@ -2080,7 +2080,7 @@ en:
     seen_recently: "User was seen recently"
     post_not_found: "Can't find a post with id %{post_id}"
     notification_already_read: "The notification this email is about has already been read"
-    topic_nil: "post.thread is nil"
+    thread_nil: "post.topic is nil"
     post_deleted: "post was deleted by the author"
     user_suspended: "user was suspended"
     already_read: "user has already read this post"
@@ -2186,7 +2186,7 @@ en:
       *   Don’t divert a thread by changing it midstream.
       *   Don’t sign your posts &mdash; every post has your profile information attached to it.
 
-      Rather than posting “+1” or “Agreed”, use the Like button. Rather than taking an existing thread in a radically different direction, use Reply as a Linked Thread.
+      Rather than posting “+1” or “Agreed”, use the Like button. Rather than taking an existing thread in a radically different direction, use Reply as a Linked Topic.
 
       <a name="stealing"></a>
 
@@ -2445,7 +2445,7 @@ en:
         <table>
         <tr><td><code>order:views</code></td><td><code>order:latest</code></td><td colspan=3></td></tr>
         <tr><td><code>status:open</code></td><td><code>status:closed</code></td><td><code>status:archived</code></td><td><code>status:noreplies</code></td><td><code>status:single_user</code></td></tr>
-        <tr><td><code>forum:foo</code></td><td><code>user:foo</code></td><td colspan=3></td></tr>
+        <tr><td><code>category:foo</code></td><td><code>user:foo</code></td><td colspan=3></td></tr>
         <tr><td><code>in:likes</code></td><td><code>in:posted</code></td><td><code>in:watching</code></td><td><code>in:tracking</code></td><td><code>in:private</code></td></tr>
         <tr><td><code>in:bookmarks</code></td><td><code>in:first</code></td><td colspan=3></td></tr>
         <tr><td><code>posts_count:num</code></td><td><code>min_age:days</code></td><td><code>max_age:days</code></td> <td colspan=2></td></tr>
@@ -2503,7 +2503,7 @@ en:
       member: |
         This badge is granted when you reach trust level 2. Thanks for participating over a period of weeks to more join our community. You can now send personal invitations from your user page or individual threads, create group messages, and a few more likes per day.
       regular: |
-        This badge is granted when you reach trust level 3. Thanks for being a regular part of our community over a period of months, one of the most active readers and a reliable contributor to what makes this community great. You can now recategorize and rename topics, access a private lounge area, more powerful spam flags, and lots more likes per day.
+        This badge is granted when you reach trust level 3. Thanks for being a regular part of our community over a period of months, one of the most active readers and a reliable contributor to what makes this community great. You can now recategorize and rename threads, access a private lounge area, more powerful spam flags, and lots more likes per day.
       leader: |
         This badge is granted when you reach trust level 4. You're a leader in this community as selected by staff, and set a positive example for the community in your deeds and words. You have the ability to edit all posts, take thread moderator actions such as pin, close, unlist, archive, split, and merge, and tons of likes per day.
 
