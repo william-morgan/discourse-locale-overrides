@@ -893,12 +893,12 @@ en:
       granted_badge: "<i title='badge granted' class='fa fa-certificate'></i><p>Earned '{{description}}'</p>"
 
       popup:
-        mentioned: '{{username}} mentioned you in "{{thread}}" - {{site_title}}'
-        quoted: '{{username}} quoted you in "{{thread}}" - {{site_title}}'
-        replied: '{{username}} replied to you in "{{thread}}" - {{site_title}}'
-        posted: '{{username}} posted in "{{thread}}" - {{site_title}}'
-        private_message: '{{username}} sent you a private message in "{{thread}}" - {{site_title}}'
-        linked: '{{username}} linked to your post from "{{thread}}" - {{site_title}}'
+        mentioned: '{{username}} mentioned you in "{{topic}}" - {{site_title}}'
+        quoted: '{{username}} quoted you in "{{topic}}" - {{site_title}}'
+        replied: '{{username}} replied to you in "{{topic}}" - {{site_title}}'
+        posted: '{{username}} posted in "{{topic}}" - {{site_title}}'
+        private_message: '{{username}} sent you a private message in "{{topic}}" - {{site_title}}'
+        linked: '{{username}} linked to your post from "{{topic}}" - {{site_title}}'
 
     upload_selector:
       title: "Add an image"
