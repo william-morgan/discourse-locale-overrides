@@ -32,11 +32,11 @@ en:
   time:
     <<: *datetime
 
-  title: "Discourse"
+  title: "TrackTalk"
   topics: "Threads"
   posts: "posts"
   loading: "Loading"
-  powered_by_html: 'Powered by <a href="http://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled'
+  powered_by_html: 'Powered by TrackTalk, best viewed with JavaScript enabled'
   log_in: "Log In"
 
   via: "%{username} via %{site_name}"
@@ -334,7 +334,7 @@ en:
 
       (For more information on trust levels, [see this topic][trust]. Please note that only members who continue to meet the requirements over time will remain regulars.)
 
-      [trust]: https://meta.discourse.org/t/what-do-user-trust-levels-do/4924
+      [trust]
 
 
   category:
@@ -757,7 +757,7 @@ en:
   site_settings:
     censored_words: "Words that will be automatically replaced with &#9632;&#9632;&#9632;&#9632;"
     delete_old_hidden_posts: "Auto-delete any hidden posts that stay hidden for more than 30 days."
-    default_locale: "The default language of this Discourse instance (ISO 639-1 Code)"
+    default_locale: "The default language of this TrackTalk instance (ISO 639-1 Code)"
     allow_user_locale: "Allow users to choose their own language interface preference"
     min_post_length: "Minimum allowed post length in characters"
     min_first_post_length: "Minimum allowed first post (thread body) length in characters"
@@ -795,7 +795,7 @@ en:
     exclude_rel_nofollow_domains: "A list of domains where nofollow should not be added to links. tld.com will automatically allow sub.tld.com as well. As a minimum, you should add the top-level domain of this site to help web crawlers find all content. If other parts of your website are at other domains, add those too."
 
     post_excerpt_maxlength: "Maximum length of a post excerpt / summary."
-    post_onebox_maxlength: "Maximum length of a oneboxed Discourse post in characters."
+    post_onebox_maxlength: "Maximum length of a oneboxed TrackTalk post in characters."
     onebox_domains_whitelist: "A list of domains to allow oneboxing for; these domains should support OpenGraph or oEmbed. Test them at http://iframely.com/debug"
 
     logo_url: "The logo image at the top left of your site, should be a wide rectangle shape. If left blank site title text will be shown."
