@@ -625,7 +625,7 @@ en:
         account_age_days: "Account age in days"
         create: "Send an Invite"
         bulk_invite:
-          none: "You haven't invited anyone here yet. You can send individual invites, or invite a bunch of people at once by <a href='https://meta.discourse.org/t/send-bulk-invites/16468'>uploading a bulk invite file</a>."
+          none: "You haven't invited anyone here yet. You can send individual invites, or invite a bunch of people at once by uploading a bulk invite file."
           text: "Bulk Invite from File"
           uploading: "Uploading..."
           success: "File uploaded successfully, you will be notified via message when the process is complete."
@@ -1709,7 +1709,7 @@ en:
         today: "Today"
         other_periods: "see top"
 
-    browser_update: 'Unfortunately, <a href="http://www.discourse.org/faq/#browser">your browser is too old to work on this site</a>. Please <a href="http://browsehappy.com">upgrade your browser</a>.'
+    browser_update: 'Unfortunately, <a href="https://whatbrowser.org/">your browser is too old to work on this site</a>. Please <a href="http://browsehappy.com">upgrade your browser</a>.'
 
     permission_types:
       full: "Create / Reply / See"
@@ -1721,7 +1721,7 @@ en:
     type_to_filter: "type to filter..."
 
     admin:
-      title: 'Discourse Admin'
+      title: 'Admin'
       moderator: 'Moderator'
 
       dashboard:
@@ -1737,7 +1737,7 @@ en:
         version_check_pending: "Looks like you upgraded recently. Fantastic!"
         installed_version: "Installed"
         latest_version: "Latest"
-        problems_found: "Some problems have been found with your installation of Discourse:"
+        problems_found: "Some problems have been found with your installation of TrackTalk:"
         last_checked: "Last checked"
         refresh_problems: "Refresh"
         no_problems: "No problems were found."
@@ -2015,7 +2015,7 @@ en:
           undo: "undo"
           undo_title: "Undo your changes to this color since the last time it was saved."
           revert: "revert"
-          revert_title: "Reset this color to Discourse's default color scheme."
+          revert_title: "Reset this color to TrackTalk's default color scheme."
           primary:
             name: 'primary'
             description: 'Most text, icons, and borders.'
@@ -2594,16 +2594,16 @@ en:
           description: First post edit
         basic_user:
           name: Basic
-          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/4">Granted</a> all essential community functions
+          description: Granted all essential community functions
         member:
           name: Member
-          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/5">Granted</a> invitations
+          description: Granted invitations
         regular:
           name: Regular
-          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/6">Granted</a> recategorize, rename, followed links and lounge
+          description: Granted recategorize, rename, followed links and lounge
         leader:
           name: Leader
-          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/7">Granted</a> global edit, pin, close, archive, split and merge
+          description: Granted global edit, pin, close, archive, split and merge
         welcome:
           name: Welcome
           description: Received a like
