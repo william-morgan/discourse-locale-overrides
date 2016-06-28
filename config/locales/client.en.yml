@@ -312,12 +312,12 @@ en:
         ok: "OK"
   
     user_action: 
-      user_posted_topic: "<a href='{{userUrl}}'>{{user}}</a> posted <a href='{{threadUrl}}'>the thread</a>"
-      you_posted_topic: "<a href='{{userUrl}}'>You</a> posted <a href='{{threadUrl}}'>the thread</a>"
+      user_posted_topic: "<a href='{{userUrl}}'>{{user}}</a> posted <a href=' {{topicUrl}}'>the thread</a>"
+      you_posted_topic: "<a href='{{userUrl}}'>You</a> posted <a href=' {{topicUrl}}'>the thread</a>"
       user_replied_to_post: "<a href='{{userUrl}}'>{{user}}</a> replied to <a href='{{postUrl}}'>{{post_number}}</a>"
       you_replied_to_post: "<a href='{{userUrl}}'>You</a> replied to <a href='{{postUrl}}'>{{post_number}}</a>"
-      user_replied_to_topic: "<a href='{{userUrl}}'>{{user}}</a> replied to <a href='{{threadUrl}}'>the thread</a>"
-      you_replied_to_topic: "<a href='{{userUrl}}'>You</a> replied to <a href='{{threadUrl}}'>the thread</a>"
+      user_replied_to_topic: "<a href='{{userUrl}}'>{{user}}</a> replied to <a href=' {{topicUrl}}'>the thread</a>"
+      you_replied_to_topic: "<a href='{{userUrl}}'>You</a> replied to <a href=' {{topicUrl}}'>the thread</a>"
   
       user_mentioned_user: "<a href='{{user1Url}}'>{{user}}</a> mentioned <a href='{{user2Url}}'>{{another_user}}</a>"
       user_mentioned_you: "<a href='{{user1Url}}'>{{user}}</a> mentioned <a href='{{user2Url}}'>you</a>"
@@ -812,8 +812,8 @@ en:
       enabled: "This site is in read only mode. Please continue to browse, but replying, likes, and other actions are disabled for now."
       login_disabled: "Login is disabled while the site is in read only mode."
       logout_disabled: "Logout is disabled while the site is in read only mode."
-    too_few_topics_and_posts_notice: "Let's <a href='http://blog.tracktalk.net/2014/08/building-a-TrackTalk-community/'>get this discussion started!</a> There are currently <strong>%{currentThreads} / %{requiredThreads}</strong> threads and <strong>%{currentPosts} / %{requiredPosts}</strong> posts. New visitors need some conversations to read and respond to."
-    too_few_topics_notice: "Let's <a href='http://blog.tracktalk.net/2014/08/building-a-TrackTalk-community/'>get this discussion started!</a> There are currently <strong>%{currentThreads} / %{requiredThreads}</strong> threads. New visitors need some conversations to read and respond to."
+    too_few_topics_and_posts_notice: "Let's <a href='http://blog.tracktalk.net/2014/08/building-a-TrackTalk-community/'>get this discussion started!</a> There are currently <strong>%{currentTopics} / %{requiredTopics}</strong> threads and <strong>%{currentPosts} / %{requiredPosts}</strong> posts. New visitors need some conversations to read and respond to."
+    too_few_topics_notice: "Let's <a href='http://blog.tracktalk.net/2014/08/building-a-TrackTalk-community/'>get this discussion started!</a> There are currently <strong>%{currentTopics} / %{requiredThreads}</strong> threads. New visitors need some conversations to read and respond to."
     too_few_posts_notice: "Let's <a href='http://blog.tracktalk.net/2014/08/building-a-TrackTalk-community/'>get this discussion started!</a> There are currently <strong>%{currentPosts} / %{requiredPosts}</strong> posts. New visitors need some conversations to read and respond to."
     logs_error_rate_notice: 
       reached: "%{timestamp}: Current rate of <a href='%{url}' target='_blank'>%{rate}</a> has reached site settings's limit of %{siteSettingRate}."
@@ -1080,13 +1080,13 @@ en:
         group_message_summary: "Messages in group inbox"
   
       popup: 
-        mentioned: '{{username}} mentioned you in "{{thread}}" - {{site_title}}'
-        group_mentioned: '{{username}} mentioned you in "{{thread}}" - {{site_title}}'
-        quoted: '{{username}} quoted you in "{{thread}}" - {{site_title}}'
-        replied: '{{username}} replied to you in "{{thread}}" - {{site_title}}'
-        posted: '{{username}} posted in "{{thread}}" - {{site_title}}'
-        private_message: '{{username}} sent you a private message in "{{thread}}" - {{site_title}}'
-        linked: '{{username}} linked to your post from "{{thread}}" - {{site_title}}'
+        mentioned: '{{username}} mentioned you in "{{topic}}" - {{site_title}}'
+        group_mentioned: '{{username}} mentioned you in "{{topic}}" - {{site_title}}'
+        quoted: '{{username}} quoted you in "{{topic}}" - {{site_title}}'
+        replied: '{{username}} replied to you in "{{topic}}" - {{site_title}}'
+        posted: '{{username}} posted in "{{topic}}" - {{site_title}}'
+        private_message: '{{username}} sent you a private message in "{{topic}}" - {{site_title}}'
+        linked: '{{username}} linked to your post from "{{topic}}" - {{site_title}}'
   
     upload_selector: 
       title: "Add an image"
@@ -1366,8 +1366,8 @@ en:
         pin_validation: "A date is required to pin this thread."
         not_pinned: "There are no threads pinned in {{categoryLink}}."
         already_pinned: 
-          one: "topics currently pinned in {{categoryLink}}: <strong class='badge badge-notification unread'>1</strong>"
-          other: "topics currently pinned in {{categoryLink}}: <strong class='badge badge-notification unread'>{{count}}</strong>"
+          one: "Topics currently pinned in {{categoryLink}}: <strong class='badge badge-notification unread'>1</strong>"
+          other: "Topics currently pinned in {{categoryLink}}: <strong class='badge badge-notification unread'>{{count}}</strong>"
         pin_globally: "Make this thread appear at the top of all thread lists until"
         confirm_pin_globally: "You already have {{count}} globally pinned threads. Too many pinned threads may be a burden for new and anonymous users. Are you sure you want to pin another thread globally?"
         unpin_globally: "Remove this thread from the top of all thread lists."
@@ -1682,7 +1682,7 @@ en:
     category: 
       can: 'can&hellip; '
       none: '(no forum)'
-      all: 'All forums'
+      all: 'All Forums'
       choose: 'Select a forum&hellip;'
       edit: 'edit'
       edit_long: "Edit"
@@ -1692,7 +1692,7 @@ en:
       topic_template: "Thread Template"
       delete: 'Delete Forum'
       create: 'New Forum'
-      create_long: 'Create a new forum'
+      create_long: 'Create a new Forum'
       save: 'Save Forum'
       slug: 'Forum Slug'
       slug_placeholder: '(Optional) dashed-words for url'
