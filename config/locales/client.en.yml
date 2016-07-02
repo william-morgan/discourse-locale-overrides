@@ -1847,7 +1847,7 @@ en:
   
     filters: 
       with_topics: "%{filter} threads"
-      with_category: "%{filter} %{forum} threads"
+      with_category: "%{filter} %{category} threads"
       latest: 
         title: "Latest"
         title_with_count: 
