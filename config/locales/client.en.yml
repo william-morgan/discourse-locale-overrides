@@ -407,13 +407,13 @@ en:
       "14": "Pending"
   
     categories: 
-      all: "all forums"
-      all_subcategories: "all"
+      all: "All Forums"
+      all_subcategories: "All Sub-Forums"
       no_subcategory: "none"
       category: "Forum"
-      category_list: "Display forum list"
+      category_list: "Display Forum list"
       reorder: 
-        title: "Reorder Categories"
+        title: "Reorder Forums"
         title_long: "Reorganize the forum list"
         fix_order: "Fix Positions"
         fix_order_tooltip: "Not all forums have a unique position number, which may cause unexpected results."
@@ -425,7 +425,7 @@ en:
       latest: "Latest"
       latest_by: "latest by"
       toggle_ordering: "toggle ordering control"
-      subcategories: "Subforums"
+      subcategories: "Sub-Forums"
       topic_stats: "The number of new threads."
       topic_stat_sentence: 
         one: "%{count} new thread in the past %{unit}."
@@ -659,7 +659,7 @@ en:
       email_always: "Send me email notifications even when I am active on the site"
   
       other_settings: "Other"
-      categories_settings: "Categories"
+      categories_settings: "Forums"
   
       enable_mailing_list: 
         one: "Are you sure you want to be emailed for every new post?"
@@ -1710,7 +1710,7 @@ en:
       color_placeholder: "Any web color"
       delete_confirm: "Are you sure you want to delete this forum?"
       delete_error: "There was an error deleting the forum."
-      list: "List Categories"
+      list: "List Forums"
       no_description: "Please add a description for this forum."
       change_in_category_topic: "Edit Description"
       already_used: 'This color has been used by another forum'
@@ -1730,7 +1730,7 @@ en:
       this_year: "this year"
       position: "position"
       default_position: "Default Position"
-      position_disabled: "Categories will be displayed in order of activity. To control the order of forums in lists, "
+      position_disabled: "Forums will be displayed in order of activity. To control the order of forums in lists, "
       position_disabled_click: 'enable the "fixed forum positions" setting.'
       parent: "Parent Forum"
       notifications: 
@@ -1843,7 +1843,7 @@ en:
       title: "Raw Email"
       not_available: "Not available!"
   
-    categories_list: "Categories List"
+    categories_list: "Forums List"
   
     filters: 
       with_topics: "%{filter} threads"
@@ -1864,7 +1864,7 @@ en:
         title: "Search"
         help: "search all threads"
       categories: 
-        title: "Categories"
+        title: "Forums"
         title_in: "Forum - {{categoryName}}"
         help: "all threads grouped by forum"
       unread: 
@@ -2821,7 +2821,7 @@ en:
         latest: '<b>g</b>, <b>l</b> Latest'
         new: '<b>g</b>, <b>n</b> New'
         unread: '<b>g</b>, <b>u</b> Unread'
-        categories: '<b>g</b>, <b>c</b> Categories'
+        categories: '<b>g</b>, <b>c</b> Forums'
         top: '<b>g</b>, <b>t</b> Top'
         bookmarks: '<b>g</b>, <b>b</b> Bookmarks'
         profile: '<b>g</b>, <b>p</b> Profile'
