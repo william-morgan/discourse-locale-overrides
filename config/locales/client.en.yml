@@ -2507,7 +2507,7 @@ en:
         title: "Search"
         help: "search all threads"
       categories:
-        title: "Forums
+        title: "Forums"
         title_in: "Forum - {{categoryName}}"
         help: "all threads grouped by forum"
       unread:
