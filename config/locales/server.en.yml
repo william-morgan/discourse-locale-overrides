@@ -885,7 +885,7 @@ en:
         moderator: Moderator
         flag_count: Flags reviewed
         time_read: Time reading
-        topic_count: threads created
+        topic_count: Threads created
         post_count: Posts created
         pm_count: PMs created
         revision_count: Revisions
@@ -1021,7 +1021,7 @@ en:
       labels:
         domain: Domain
         num_clicks: Clicks
-        num_topics: threads
+        num_topics: Threads
     top_referred_topics:
       title: "Top Referred Threads"
       labels:
@@ -4025,7 +4025,7 @@ en:
         description: "You’re almost done! Let’s invite some people to help <a href='https://blog.discourse.org/2014/08/building-a-discourse-community/' target='blank'>seed your discussions</a> with interesting threads and replies to get your community started."
 
       finished:
-        title: "Your TrackTalk is Ready!"
+        title: "Your TrackTalk App is Ready!"
         description: |
           <p>If you ever feel like changing these settings, visit <a href='/admin' target='_blank'>your admin section</a>; find it next to the wrench icon in the site menu.</p>
           <p>Have fun, and good luck <a href='https://blog.discourse.org/2014/08/building-a-discourse-community/' target='_blank'>building your new community!</a></p>
