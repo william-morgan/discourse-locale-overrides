@@ -44,7 +44,7 @@ en:
     pm: "pm"
 
   title: "TrackTalk"
-  threads: "Threads"
+  topics: "Threads"
   posts: "posts"
   loading: "Loading"
   powered_by_html: 'Powered by <a href="https://www.discourse.org">TrackTalk</a>, best viewed with JavaScript enabled'
@@ -930,7 +930,7 @@ en:
       title: "User Profile Views"
       xaxis: "Day"
       yaxis: "Number of user profiles viewed"
-    threads:
+    topics:
       title: "Threads"
       xaxis: "Day"
       yaxis: "Number of new threads"
