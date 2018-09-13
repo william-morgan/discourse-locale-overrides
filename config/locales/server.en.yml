@@ -273,7 +273,7 @@ en:
   prev_page: "? previous page"
   page_num: "Page %{num}"
   home_title: "Home"
-  threads_in_category: "Threads in the '%{category}' forum"
+  topics_in_category: "Threads in the '%{category}' forum"
   rss_posts_in_topic: "RSS feed of '%{topic}'"
   rss_topics_in_category: "RSS feed of threads in the '%{category}' forum"
   author_wrote: "%{author} wrote:"
@@ -591,7 +591,7 @@ en:
       create_post: "You’re replying too quickly. Please wait %{time_left} before trying again."
       delete_post: "You’re deleting posts too quickly. Please wait %{time_left} before trying again."
       public_group_membership: "You’re joining/leaving groups too frequently. Please wait %{time_left} before trying again."
-      threads_per_day: "You’ve reached the maximum number of new threads. Please wait %{time_left} before trying again."
+      topics_per_day: "You’ve reached the maximum number of new threads. Please wait %{time_left} before trying again."
       pms_per_day: "You’ve reached the maximum number of messages. Please wait %{time_left} before trying again."
       create_like: "You’ve reached the maximum number of likes. Please wait %{time_left} before trying again."
       create_bookmark: "You’ve reached the maximum number of bookmarks. Please wait %{time_left} before trying again."
@@ -1079,7 +1079,7 @@ en:
       title: "Time to first response"
       xaxis: "Day"
       yaxis: "Average time (hours)"
-    threads_with_no_response:
+    topics_with_no_response:
       title: "Threads with no response"
       xaxis: "Day"
       yaxis: "Total"
@@ -1258,8 +1258,8 @@ en:
     suppress_reply_directly_above: "Don't show the expandable in-reply-to on a post when there is only a single reply directly above this post."
     suppress_reply_when_quoting: "Don't show the expandable in-reply-to on a post when post quotes reply."
     max_reply_history: "Maximum number of replies to expand when expanding in-reply-to"
-    threads_per_period_in_top_summary: "Number of top threads shown in the default top threads summary."
-    threads_per_period_in_top_page: "Number of top threads shown on the expanded 'Show More' top threads."
+    topics_per_period_in_top_summary: "Number of top threads shown in the default top threads summary."
+    topics_per_period_in_top_page: "Number of top threads shown on the expanded 'Show More' top threads."
     redirect_users_to_top_page: "Automatically redirect new and long absent users to the top page."
     top_page_default_timeframe: "Default timeframe for the top view page."
     show_email_on_profile: "Show a user's email on their profile (only visible to themselves and staff)"
@@ -1387,7 +1387,7 @@ en:
     alert_admins_if_errors_per_minute: "Number of errors per minute in order to trigger an admin alert. A value of 0 disables this feature. NOTE: requires restart."
     alert_admins_if_errors_per_hour: "Number of errors per hour in order to trigger an admin alert. A value of 0 disables this feature. NOTE: requires restart."
 
-    forums_topics: "Number of threads to show in /categories page."
+    categories_topics: "Number of threads to show in /categories page."
     suggested_topics: "Number of suggested threads shown at the bottom of a thread."
     limit_suggested_to_category: "Only show threads from the current forum in suggested threads."
     suggested_topics_max_days_old: "Suggested threads should not be more than n days old."
@@ -4007,13 +4007,13 @@ en:
             choices:
               latest:
                 label: "Latest Threads"
-              forums_only:
+              categories_only:
                 label: "Forums Only"
-              forums_with_featured_topics:
+              categories_with_featured_topics:
                 label: "Forums with Featured Threads"
-              forums_and_latest_topics:
+              categories_and_latest_topics:
                 label: "Forums and Latest Threads"
-              forums_and_top_topics:
+              categories_and_top_topics:
                 label: "Forums and Top Threads"
 
       emoji:
