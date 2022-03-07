@@ -2648,7 +2648,7 @@ en:
       browse_all_tags: Browse all tags
 
       view_latest_topics: view latest threads
-      suggest_create_topic: Ready to <a href>start a new conversation?</a>
+      suggest_create_topic: Ready to start a new thread?</a>
       jump_reply_up: jump to earlier reply
       jump_reply_down: jump to later reply
       deleted: "The thread has been deleted"
