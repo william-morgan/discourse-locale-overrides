@@ -50,7 +50,7 @@ en:
   posts: "posts"
   views: "views"
   loading: "Loading"
-  powered_by_html: 'Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled'
+  powered_by_html: 'Powered by <a href="https://www.tracktalk.net">TrackTalk.net</a>, best viewed with JavaScript enabled'
   sign_up: "Sign Up"
   log_in: "Log In"
   submit: "Submit"
